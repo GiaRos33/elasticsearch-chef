@@ -11,6 +11,10 @@ default['elastic']['group']                 = node['install']['user'].empty? ? "
 default['elastic']['elk-group']             = node['install']['user'].empty? ? "elkadmin" : node['install']['user']
 default['elastic']['user-home']             = "/home/#{node['elastic']['user']}"
 default['elastic']['elk-home']              = "/home/#{node['elastic']['elk-user']}"
+#default['elastic']['uid']                   = "10130"
+default['elastic']['gid']                   = "10131"
+default['elk-user']['uid']                  = "10140"
+default['elk-group']['gid']                 = "10141"
 
 default['elastic']['port']                  = "9200"
 default['elastic']['ntn_port']              = "9300" #elastic node to node communication port
